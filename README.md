@@ -1,7 +1,6 @@
 # Boot Docker Image
 
-A **highly experimental** boot image based on Debian Wheezy,
-[Oracle JDK8](https://github.com/pandeiro/docker-oracle-jdk8), and the
+A **highly experimental** boot image based on `ubuntu:12.04`, OpenJDK 7, and the
 [v2-nevergreen](v2-nevergreen branch) of the
 [boot build tool](https://github.com/tailrecursion/boot/tree/v2-nevergreen)
 for [Clojure](http://clojure.org)
@@ -34,11 +33,10 @@ repl
 
 ```bash
 cd /path/to/project
-alias project-repl="docker run -i -t -v $PWD:/project alandipert/boot repl"
+alias project-repl="docker run -i -t -v $PWD:/app alandipert/boot repl"
 project-repl
 ```
 
 ### Thanks
 
-* To [Murphy McMahon](https://github.com/pandeiro) for the [docker-lein](https://github.com/pandeiro/docker-lein) project, on which this is based.
-
+* To [Murphy McMahon](https://github.com/pandeiro) for inspiring this project with his own [docker-lein](https://github.com/pandeiro/docker-lein).
